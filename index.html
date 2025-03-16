@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeloX - Bicicletas de Alta Velocidad</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html">🚴‍♂️VeloX</a></h1>
+                <p>...Vive la Velocidad</p>
+            </div>
+    
+            <div class="search-bar">
+                <input type="text" placeholder="Estoy buscando...">
+                <button type="submit">Buscar</button>
+            </div>
+    
+            <div class="user-options">
+                <span>📞 Atención al cliente <strong>8296327573</strong></span>
+                <span>🛒 <strong>0</strong></span>
+                <span>👤 Log in | Register</span>
+            </div>
+    
+            <!-- Botón de menú hamburguesa -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- MENÚ DEBAJO DEL HEADER -->
+    <nav class="main-menu" id="main-menu">
+        <ul>
+            <li><a href="bicicletas.html">BICICLETAS</a></li>
+            <li><a href="accesorios.html">ACCESORIOS</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+      
+      
+        </ul>
+    </nav>
+    <!-- Menú lateral móvil -->
+<nav class="mobile-menu" id="mobile-menu">
+    <div class="menu-header">
+        <span>Menú</span>
+        <button id="close-menu">&times;</button>
+    </div>
+    <ul>
+        <li><a href="bicicletas.html">BICICLETAS</a></li>
+        <li><a href="accesorios.html">ACCESORIOS</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+  
+    </ul>
+    
+</nav>
+
+
+
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <h2>Bienvenido a VeloX</h2>
+            <p>Las mejores bicicletas para ciudad y aventura.</p>
+        </div>
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="bici.jpg" alt="Imagen 1"></div>
+                <div class="swiper-slide"><img src="bici1.jpg" alt="Imagen 2"></div>
+                <div class="swiper-slide"><img src="bic2.jpg" alt="Imagen 3"></div>
+                <div class="swiper-slide"><img src="bic3.jpg" alt="Imagen 4"></div>
+            </div>
+            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    
+    <div class="section">
+        <h2>Nuestros Productos</h2>
+        <div class="products">
+            <div class="product">
+                <h3>VeloX Pro</h3>
+                <p>Bicicleta de carrera ligera.</p>
+            </div>
+            <div class="product">
+                <h3>VeloX Urban</h3>
+                <p>Perfecta para la ciudad.</p>
+            </div>
+            <div class="product">
+                <h3>VeloX MTB</h3>
+                <p>Máxima resistencia en montaña.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Contacto</h2>
+        <p>📧 Email: contacto@veloxbikes.com</p>
+        <p>📍 Dirección: Av. Bicicletas 123, Ciudad</p>
+    </div>
+    
+    <footer>
+        &copy; 2025 VeloX. Todos los derechos reservados.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
