@@ -35,4 +35,39 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileMenu.classList.remove("active");
         }
     });
+
+    // Asegurarse de que el menú principal sea manejado también
+    const mainMenu = document.querySelector('.main-menu');
+    
+    // Alternar la clase 'active' para el menú principal
+    menuToggle.addEventListener('click', () => {
+        mainMenu.classList.toggle('active');
+    });
 });
+
+function adjustIcons() {
+    let screenWidth = window.innerWidth;
+    
+    document.querySelectorAll(".hide-on-mobile").forEach(el => {
+        if (screenWidth <= 768) {
+            el.style.display = "none";
+        } else {
+            el.style.display = "inline";
+        }
+    });
+}
+
+// Ejecutar al cargar la página y al redimensionar
+window.addEventListener("load", adjustIcons);
+window.addEventListener("resize", adjustIcons);
+
+// Selecciona los elementos del menú
+const menuToggle = document.querySelector('.menu-toggle');
+const mainMenu = document.querySelector('.main-menu');
+
+// Al hacer clic en el botón hamburguesa, muestra el menú
+menuToggle.addEventListener('click', () => {
+    mainMenu.classList.toggle('active');
+});
+
+

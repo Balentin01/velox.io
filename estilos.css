@@ -38,8 +38,8 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: #ff4500;
-
 }
+
 .logo h1 a {
     text-decoration: none; /* Elimina el subrayado */
     color: inherit; /* Mantiene el color del texto del padre (por ejemplo, negro) */
@@ -73,6 +73,26 @@ header {
 
 .search-bar button:hover {
     background: #ff7300;
+}
+
+.user-options {
+    display: flex;            /* Alinea los elementos horizontalmente */
+    align-items: center;      /* Alinea los elementos verticalmente */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto alrededor del enlace */
+}
+
+.phone-container {
+    display: flex;
+    flex-direction: column;   /* Coloca el número en una nueva línea */
+    margin-right: 20px;       /* Espacio entre "Atención al cliente" y los otros elementos */
+}
+
+.phone {
+    margin-top: 5px;          /* Pequeño margen para separar el número */
 }
 
 /* --- MENÚ DEBAJO DEL HEADER --- */
@@ -164,12 +184,21 @@ header {
     object-fit: cover;
 }
 
-/* RESPONSIVE: Modo móvil */
+/* Responsivo para dispositivos con más de 769px */
+@media (min-width: 769px) {
+    .search-bar {
+        width: 450px; /* Solo para PC */
+    }
+}
+
+/* Responsivo para dispositivos con menos de 769px */
+/* Responsivo para móviles */
 @media (max-width: 768px) {
-    /* Ajustar header para pantallas pequeñas */
+    @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
     }
 
     .logo h1 {
@@ -177,18 +206,30 @@ header {
     }
 
     .search-bar {
-        width: 200px;
+        width: 230px; /* Aumenté el tamaño de la barra de búsqueda */
     }
 
-    /* Menú en vertical en dispositivos pequeños */
+    .user-options {
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .search-bar {
+        margin-right: 15px;
+    }
+
+    .phone-container {
+        margin-right: 0;
+    }
+
+    /* Menú en vertical y oculto por defecto */
     .main-menu ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        display: none; /* Ocultamos el menú por defecto */
+        display: none; /* Menú oculto por defecto */
     }
 
-    /* Mostrar el menú cuando se activa */
     .main-menu.active ul {
         display: flex;
     }
@@ -198,28 +239,10 @@ header {
         padding: 8px 12px;
     }
 
-    /* Mostrar el botón hamburguesa */
     .menu-toggle {
         display: flex;
     }
 }
-/* --- Botón de menú hamburguesa --- */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1100;
-}
-
-.menu-toggle .bar {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    border-radius: 5px;
 }
 
 /* --- Menú Lateral Móvil --- */
@@ -306,4 +329,71 @@ header {
     .menu-toggle {
         display: flex;
     }
+
+    footer{
+        display: flex;
+    }
+}
+
+/* --- Estilos del nosotros--- */
+
+  /* Estilo para la sección "¿Quiénes somos?" */
+  .nosotros {
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.nosotros p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.nosotros img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para el pie de página */
+.nosotros img{
+    width:100%; 
+    max-width:200px;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
