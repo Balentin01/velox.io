@@ -71,3 +71,35 @@ menuToggle.addEventListener('click', () => {
 });
 
 
+//session bicicletas
+// Array para almacenar productos en el carrito
+let carrito = [];
+
+// Obtener el contador del carrito
+const cartCount = document.getElementById('cart-count');
+
+// Función para agregar productos al carrito y actualizar el contador
+function agregarAlCarrito(producto) {
+    carrito.push(producto);  // Añadir el producto al carrito
+    // Actualizar el contador de productos en el carrito
+    updateCartCount();
+    alert(`${producto} ha sido añadido al carrito.`);
+}
+
+// Función para incrementar el contador
+function updateCartCount() {
+    // Actualizar el contador con la cantidad de productos en el carrito
+    cartCount.textContent = carrito.length;
+}
+
+// Obtener todos los botones "Añadir al carrito"
+const botones = document.querySelectorAll('.add-to-cart');
+
+// Asignar el evento 'click' a todos los botones de "Añadir al carrito"
+botones.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+        // Obtener el nombre del producto usando el índice del botón
+        const nombreProducto = document.querySelectorAll('.product-card h3')[index].textContent;
+        agregarAlCarrito(nombreProducto);  // Añadir el producto al carrito
+    });
+});
