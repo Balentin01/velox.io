@@ -24,7 +24,16 @@ header {
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+header:hover + .main-menu {
+    visibility: visible; /* Hace visible el menú */
+    opacity: 1; /* Hace el menú completamente opaco */
+}
 
+/* --- Si queremos mostrar el menú cuando hagamos scroll --- */
+.scrolled .main-menu {
+    visibility: visible;
+    opacity: 1;
+}
 .header-container {
     display: flex;
     align-items: center;
@@ -217,6 +226,10 @@ a {
     .search-bar {
         margin-right: 15px;
     }
+    .search-bar button {
+        font-size: 12px; /* Reduce el tamaño del texto */
+        padding: 6px 10px; /* Ajusta el tamaño del botón */
+    }
 
     .phone-container {
         margin-right: 0;
@@ -333,6 +346,118 @@ a {
     footer{
         display: flex;
     }
+}
+
+/* Botón flotante del chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    background: #ff4500;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Ventana del chatbot */
+.chat-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Encabezado del chat */
+.chat-header {
+    background: #ff4500;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botón de cerrar */
+.close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Cuerpo del chat */
+.chat-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+/* Mensajes */
+.bot-message, .user-message {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: #ddd;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #ff7300;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Input y botón de enviar */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-input button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#map {
+    height: 200px; /* Ajusta la altura aquí */
+    width: 400px
 }
 
 /* --- Estilos del nosotros--- */

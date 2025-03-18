@@ -99,6 +99,27 @@
         </div>
     </div>
 </section>
+    <!-- Botón flotante para abrir el chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" onclick="toggleChat()">
+            💬
+        </div>
+    
+        <!-- Ventana de chat -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <span>Chat de Ayuda</span>
+                <button class="close-chat" onclick="toggleChat()">×</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <p class="bot-message">Hola! ¿En qué puedo ayudarte? 😊</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
 <footer>
     &copy; 2025 VeloX. Todos los derechos reservados.
 </footer>

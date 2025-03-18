@@ -103,3 +103,74 @@ botones.forEach((boton, index) => {
         agregarAlCarrito(nombreProducto);  // Añadir el producto al carrito
     });
 });
+
+//chatbot
+function toggleChat() {
+    let chatWindow = document.querySelector(".chat-window");
+    chatWindow.style.display = chatWindow.style.display === "block" ? "none" : "block";
+}
+
+function sendMessage() {
+    let userInput = document.getElementById("user-input");
+    let chatBody = document.getElementById("chat-body");
+
+    if (userInput.value.trim() !== "") {
+        // Crear mensaje del usuario
+        let userMessage = document.createElement("p");
+        userMessage.classList.add("user-message");
+        userMessage.textContent = userInput.value;
+        chatBody.appendChild(userMessage);
+
+        // Simular respuesta del bot
+        setTimeout(() => {
+            let botMessage = document.createElement("p");
+            botMessage.classList.add("bot-message");
+            botMessage.textContent = "Gracias por tu mensaje, en breve te responderemos. 😊";
+            chatBody.appendChild(botMessage);
+
+            // Hacer scroll hacia abajo
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 1000);
+
+        // Limpiar input
+        userInput.value = "";
+    }
+}
+function initMap() {
+    var geocoder = new google.maps.Geocoder();
+    var address = "C. 19 de Marzo 145, Santo Domingo"; // Dirección exacta
+
+    var map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16, // Nivel de zoom
+      center: { lat: 18.4861, lng: -69.9312 }, // Centro inicial (Santo Domingo)
+    });
+
+    // Convertir dirección a coordenadas
+    geocoder.geocode({ address: address }, function (results, status) {
+      if (status === "OK") {
+        map.setCenter(results[0].geometry.location);
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+          title: "VeloX - Ubicación",
+        });
+      } else {
+        console.error("Geocode falló: " + status);
+      }
+    });
+  }
+
+// Detectar el evento de desplazamiento (scroll) y agregar/quitar la clase
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const mainMenu = document.querySelector('.main-menu');
+    
+    // Cuando el scroll pase de los 50px, se agrega la clase "scrolled"
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
