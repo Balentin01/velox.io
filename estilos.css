@@ -342,7 +342,9 @@ a {
     .menu-toggle {
         display: flex;
     }
-
+.contacto{
+    display: flex;
+}
     footer{
         display: flex;
     }
@@ -506,6 +508,16 @@ a {
 .nosotros img{
     width:100%; 
     max-width:200px;
+}
+.contacto{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
 }
 footer {
     text-align: center;
