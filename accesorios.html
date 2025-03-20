@@ -65,22 +65,78 @@
         <li><a href="nosotros.html">NOSOTROS</a></li>
     </ul>
 </nav>
+</div>
+<section class="bicicletas">
+    <h1>Conoce nuestros accesorios para bicicletas</h1>
+  
+</section>
+<section class="product-selection">
+    <h2>Elige tu Accesorio</h2>
+    <div class="products">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <img src="portabotella.webp" alt="Producto 1" class="product-image">
+            <h3>Porta Botella</h3>
+            <p class="product-description">Porta botella de polímero técnico de alta resistencia (40 g).</p>
+            <p class="price">RD$1,060.00</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+        </div>
 
-<footer>
-    <div class="contacto">
-        <h2>Contacto</h2>
-        <p>📧 Email: balentinliranzo@gmail.com</p>
-        <p>📍 Dirección: 150 C. 19 de Marzo
-            Santo Domingo, Distrito Nacional</p>
-        <a href="https://wa.me/18298807107" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61574558664918" target="_blank" rel="noopener" title="Facebook"> <i class="fa-brands fa-facebook"></i></a>
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <img src="luces.webp" alt="Producto 2" class="product-image">
+            <h3>Luz Delantera</h3>
+            <p class="product-description">LED con 2 modos y rango de 1-100 lúmenes...</p>
+            <p class="price">RD$1,010.00</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <img src="amsParqueado.webp" alt="Producto 3" class="product-image">
+            <h3>AMS Parqueador</h3>
+            <p class="product-description">AMS Parqueador: Soporte ligero y ajustable, ideal para todo tipo de bicicletas. </p>
+            <p class="price">RD$2,940.00</p>
+            <button class="add-to-cart">Añadir al carrito</button>
+        </div>
     </div>
-    <p>&copy; 2025 VeloX. Todos los derechos reservados.</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3N6dpB4unIzeZzbZhgEocepfCKrnvbI&callback=initMap"></script>
-
-</html>
+</section>
+    <!-- Botón flotante para abrir el chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" onclick="toggleChat()">
+            💬
+        </div>
+    
+        <!-- Ventana de chat -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <span>Chat de Ayuda</span>
+                <button class="close-chat" onclick="toggleChat()">×</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <p class="bot-message">Hola! ¿En qué puedo ayudarte? 😊</p>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contacto">
+            <h2>Contacto</h2>
+            <p>📧 Email: balentinliranzo@gmail.com</p>
+            <p>📍 Dirección: 150 C. 19 de Marzo
+                Santo Domingo, Distrito Nacional</p>
+            <a href="https://wa.me/18298807107" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574558664918" target="_blank" rel="noopener" title="Facebook"> <i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p>&copy; 2025 VeloX. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3N6dpB4unIzeZzbZhgEocepfCKrnvbI&callback=initMap"></script>
+    
+    </html>

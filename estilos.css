@@ -29,11 +29,6 @@ header:hover + .main-menu {
     opacity: 1; /* Hace el menú completamente opaco */
 }
 
-/* --- Si queremos mostrar el menú cuando hagamos scroll --- */
-.scrolled .main-menu {
-    visibility: visible;
-    opacity: 1;
-}
 .header-container {
     display: flex;
     align-items: center;
@@ -46,7 +41,7 @@ header:hover + .main-menu {
 .logo h1 {
     font-size: 24px;
     font-weight: bold;
-    color: #ff4500;
+    color: #004bb6;
 }
 
 .logo h1 a {
@@ -72,7 +67,7 @@ header:hover + .main-menu {
 }
 
 .search-bar button {
-    background: #ff4500;
+    background: #004bb6;
     border: none;
     color: white;
     padding: 8px 12px;
@@ -81,7 +76,7 @@ header:hover + .main-menu {
 }
 
 .search-bar button:hover {
-    background: #ff7300;
+    background: #004bb6;
 }
 
 .user-options {
@@ -107,10 +102,12 @@ a {
 /* --- MENÚ DEBAJO DEL HEADER --- */
 .main-menu {
     width: 100%;
-    background: linear-gradient(90deg, #ff4500, #ff7300);
+    background: #004bb6;
     padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centra los elementos */
+    justify-content: center;
+    align-items: center; /* Asegura alineación vertical */
+    position: relative; /* Mantiene la estructura */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -288,7 +285,7 @@ a {
     font-weight: bold;
     font-size: 18px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #ff4500;
+    border-bottom: 2px solid #004bb6;
 }
 
 #close-menu {
