@@ -102,13 +102,12 @@ a {
 /* --- MENÚ DEBAJO DEL HEADER --- */
 .main-menu {
     width: 100%;
-    background: #004bb6;
+    background: linear-gradient(90deg, #004bb6, #004bb6);
     padding: 10px 0;
     display: flex;
-    justify-content: center;
-    align-items: center; /* Asegura alineación vertical */
-    position: relative; /* Mantiene la estructura */
+    justify-content: center; /* Centra los elementos */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 
 /* Estilos del menú */
