@@ -509,16 +509,29 @@ a {
     width:100%; 
     max-width:200px;
 }
-.contacto{
+.ad-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    padding: 15px;
+    background-color: yellow;
+    color: black;
+    border: 2px solid black;
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 30px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
 }
+
+.ad-container button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
     background-color: #333;
@@ -669,5 +682,202 @@ footer p {
     .products {
         flex-direction: column;  /* Apilar las tarjetas en una columna */
         align-items: center; /* Centrar las tarjetas */
+    }
+}
+
+  /* Registro */
+  .contenedor {
+    display: flex; /* Activa el diseño en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los formularios */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+
+}
+.lista{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    font-family: Arial, sans-serif; /* Cambia la fuente */
+    font-size: 28px; /* Cambia el tamaño de la letra */
+    font-weight: bold; /* Hace la letra más gruesa */
+    color: #333;
+    cursor: pointer;
+    font-family: "Bold 700", cursive;
+    margin-bottom: 15px
+}
+.lista li{
+    color: gray;
+    font-weight: normal;
+
+}
+.lista .active {
+    color: black;
+    font-weight: bold;
+}
+.formulario_oculto {
+    display: none;
+}
+#login, #registro {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px; /* Más espacio entre inputs */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto cuando el usuario hace clic en el input */
+input:focus {
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px; /* Espacio extra arriba del botón */
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background: gray;
+    transform: scale(1.05);
+}
+
+/* Efecto cuando se presiona el botón */
+button:active {
+    transform: scale(0.95);
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+h2{
+    margin-bottom: 15px
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .lista {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .lista li {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .formulario {
+        padding: 15px;  /* Menos padding para pantallas pequeñas */
+    }
+
+    .formulario input, .formulario button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
+
+    .formulario h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lista li {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .formulario {
+        width: 95%;
+    }
+
+    .formulario input, .formulario button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .formulario h2 {
+        font-size: 16px;
+    }
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer .contacto {
+        font-size: 13px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    footer .contacto h2 {
+        font-size: 18px;
+    }
+
+    footer .contacto p {
+        font-size: 12px;
+    }
+
+    footer .contacto a {
+        font-size: 16px;
+        margin: 0 8px;
+    }
+
+    footer .contacto a i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 12px;
+    }
+
+    footer .contacto h2 {
+        font-size: 16px;
+    }
+
+    footer .contacto p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    footer .contacto a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    footer .contacto a i {
+        font-size: 18px;
     }
 }

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Sigmar&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,7 +32,7 @@
     <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
 </span>
 <span class="user-container">
-    <a href="registro.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> <a href="registro.html#login" title="registro">Log in</a> |<a href="registro.html#register" title="registro">Register</a> </span>
+    <a href="registro.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> <a href="registro.html#login" onclick="mostrarLogin()">Log in</a> |<a href="registro.html#registro" title="registro" onclick="mostrarRegistro()">Register</a> </span>
 </span>
             <!-- Botón de menú hamburguesa -->
             <div class="menu-toggle" id="menu-toggle">
@@ -88,19 +89,29 @@
         <h2>Nuestros Productos</h2>
         <div class="products">
             <div class="product-card">
-                <h3>VeloX Pro</h3>
+                <h3>VeloX 26</h3>
                 <p>Bicicleta de carrera ligera.</p>
                 <img src="bici24.jpg" alt="VeloX Pro" class="product-image">
             </div>
             <div class="product-card">
-                <h3>VeloX Urban</h3>
+                <h3>VeloX 29</h3>
                 <p>Perfecta para la ciudad.</p>
                 <img src="bici26.jpg" alt="VeloX Pro" class="product-image">
             </div>
             <div class="product-card">
-                <h3>VeloX MTB</h3>
+                <h3>VeloX 24</h3>
                 <p>Máxima resistencia en montaña.</p>
                 <img src="bici29.jpg" alt="VeloX Pro" class="product-image">
+            </div>
+            <div class="product-card">
+                <h3>Mas Bicicletas</h3>
+                <a href="bicicletas.html"> <img src="vermas.png" alt="VeloX Pro" class="product-image"></a>
+                <p>Ver mas.</p>
+               
+            </div>
+            <div class="ad-container">
+                <p>¡Oferta especial! 50% de descuento en bicicletas 🚴‍♂️</p>
+                <button onclick="cerrarAnuncio()">Cerrar</button>
             </div>
         </div>
     </div>
@@ -129,20 +140,21 @@
 </div>
 <div id="map" ></div>
 
+<footer>
+    <div class="contacto">
+        <h2>Contacto</h2>
+        <p>📧 Email: balentinliranzo@gmail.com</p>
+        <p>📍 Dirección: 150 C. 19 de Marzo
+            Santo Domingo, Distrito Nacional</p>
+        <a href="https://wa.me/18298807107" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574558664918" target="_blank" rel="noopener" title="Facebook"> <i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2025 VeloX. Todos los derechos reservados.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
-    <footer>
-        <div class="contacto">
-            <h2>Contacto</h2>
-            <p>📧 Email: balentinliranzo@gmail.com</p>
-            <p>📍 Dirección: 150 C. 19 de Marzo
-                Santo Domingo, Distrito Nacional</p>
-        </div>
-        &copy; 2025 VeloX. Todos los derechos reservados.
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-   
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3N6dpB4unIzeZzbZhgEocepfCKrnvbI&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3N6dpB4unIzeZzbZhgEocepfCKrnvbI&callback=initMap"></script>
 
-</body>
 </html>

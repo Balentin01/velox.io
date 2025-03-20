@@ -161,16 +161,32 @@ function initMap() {
     });
   }
 
-// Detectar el evento de desplazamiento (scroll) y agregar/quitar la clase
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const mainMenu = document.querySelector('.main-menu');
+//anuncio
+function cerrarAnuncio() {
+    document.querySelector(".ad-container").style.display = "none";
+}
+
+//formulario
+function mostrarLogin() {
+    document.getElementById("login").classList.remove("formulario_oculto");
+    document.getElementById("registro").classList.add("formulario_oculto");
     
-    // Cuando el scroll pase de los 50px, se agrega la clase "scrolled"
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+    document.getElementById("loginTab").classList.add("active");
+    document.getElementById("registroTab").classList.remove("active");
+}
+
+function mostrarRegistro() {
+    document.getElementById("login").classList.add("formulario_oculto");
+    document.getElementById("registro").classList.remove("formulario_oculto");
+
+    document.getElementById("loginTab").classList.remove("active");
+    document.getElementById("registroTab").classList.add("active");
+}
+
+function mostrarInicio() {
+    alert("¡Ha iniciado Sesion!");
+}
+function mostrar_Registro() {
+    alert("¡Se ha registrado!");
+}
 
