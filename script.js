@@ -190,3 +190,21 @@ function mostrar_Registro() {
     alert("¡Se ha registrado!");
 }
 
+const checkbox = document.getElementById("dark-mode-toggle");
+const body = document.body;
+
+// Verificar si el usuario ya activó el modo oscuro antes
+if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+    checkbox.checked = true; // Mantener el check marcado
+}
+
+checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+        body.classList.add("dark-mode");
+        localStorage.setItem("dark-mode", "enabled");
+    } else {
+        body.classList.remove("dark-mode");
+        localStorage.setItem("dark-mode", "disabled");
+    }
+});

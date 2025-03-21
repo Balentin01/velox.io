@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VeloX - Bicicletas de Alta Velocidad</title>
+    <title>¿VeloX?</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="icon" type="image/x-icon" href="icon.png">
@@ -12,150 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Sigmar&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1><a href="index.html">🚴‍♂️VeloX</a></h1>
-                <p>...Vive la Velocidad</p>
-            </div>
-    
-            <div class="search-bar">
-                <input type="text" placeholder="Estoy buscando...">
-                <button type="submit">Buscar</button>
-            </div>
-    
-         <div class="phone-container">
-    <label class="hide-on-mobile"><i class="fas fa-phone-alt"></i> Atención al cliente</label>
-    <span class="phone"><strong class="hide-on-mobile">8296327573</strong></span>
-</div>
-<span class="cart-container">
-    <i class="fas fa-shopping-cart"></i> <strong class="hide-on-mobile">0</strong>
-</span>
-<span class="user-container">
-    <a href="registro.html" title="registro"> <i class="fas fa-user"></i> </a><span class="hide-on-mobile"> <a href="registro.html#login" onclick="mostrarLogin()">Log in</a> |<a href="registro.html#registro" title="registro" onclick="mostrarRegistro()">Register</a> </span>
-</span>
-            <!-- Botón de menú hamburguesa -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </header>
-    
-    <!-- MENÚ DEBAJO DEL HEADER -->
-    <nav class="main-menu" id="main-menu">
-        <ul>
-            <li><a href="bicicletas.html">BICICLETAS</a></li>
-            <li><a href="accesorios.html">ACCESORIOS</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-      
-      
-        </ul>
-    </nav>
-    <!-- Menú lateral móvil -->
-<nav class="mobile-menu" id="mobile-menu">
-    <div class="menu-header">
-        <span>Menú</span>
-        <button id="close-menu">&times;</button>
-    </div>
-    <ul>
-        <li><a href="bicicletas.html">BICICLETAS</a></li>
-        <li><a href="accesorios.html">ACCESORIOS</a></li>
-        <li><a href="nosotros.html">NOSOTROS</a></li>
-    </ul>
-</nav>
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h2>Bienvenido a VeloX</h2>
-            <p>Las mejores bicicletas para ciudad y aventura.</p>
-        </div>
-        
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="bici.jpg" alt="Imagen 1"></div>
-                <div class="swiper-slide"><img src="bici1.jpg" alt="Imagen 2"></div>
-                <div class="swiper-slide"><img src="bic2.jpg" alt="Imagen 3"></div>
-                <div class="swiper-slide"><img src="bic3.jpg" alt="Imagen 4"></div>
-                <div class="swiper-slide"><img src="bici4.jpg" alt="Imagen 4"></div>
-            </div>
-            
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </section>
-    
-    <div class="product-selection">
-        <h2>Nuestros Productos</h2>
-        <div class="products">
-            <div class="product-card">
-                <h3>VeloX 26</h3>
-                <p>Bicicleta de carrera ligera.</p>
-                <img src="bici24.jpg" alt="VeloX Pro" class="product-image">
-            </div>
-            <div class="product-card">
-                <h3>VeloX 29</h3>
-                <p>Perfecta para la ciudad.</p>
-                <img src="bici26.jpg" alt="VeloX Pro" class="product-image">
-            </div>
-            <div class="product-card">
-                <h3>VeloX 24</h3>
-                <p>Máxima resistencia en montaña.</p>
-                <img src="bici29.jpg" alt="VeloX Pro" class="product-image">
-            </div>
-            <div class="product-card">
-                <h3>Mas Bicicletas</h3>
-                <a href="bicicletas.html"> <img src="vermas.png" alt="VeloX Pro" class="product-image"></a>
-                <p>Ver mas.</p>
-               
-            </div>
-            <div class="ad-container">
-                <p>¡Oferta especial! Por motivo de nuestro regreso tenemos un 25% de descuento en bicicletas 🚴‍♂️</p>
-                <button onclick="cerrarAnuncio()">Cerrar</button>
-            </div>
-        </div>
-    </div>
-    
-   
-    <!-- Botón flotante para abrir el chatbot -->
-<div class="chatbot-container">
-    <div class="chatbot-icon" onclick="toggleChat()">
-        💬
-    </div>
+<h1>No todo esta perdido, usa este boton y descubre lo:</h1>
+<button onclick="location.href='velox.html'">Volver a la página principal</button>
+    </body>
 
-    <!-- Ventana de chat -->
-    <div class="chat-window">
-        <div class="chat-header">
-            <span>Chat de Ayuda</span>
-            <button class="close-chat" onclick="toggleChat()">×</button>
-        </div>
-        <div class="chat-body" id="chat-body">
-            <p class="bot-message">Hola! ¿En qué puedo ayudarte? 😊</p>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
-    </div>
-</div>
-<div id="map" ></div>
-
-<footer>
-    <div class="contacto">
-        <h2>Contacto</h2>
-        <p>📧 Email: balentinliranzo@gmail.com</p>
-        <p>📍 Dirección: 150 C. 19 de Marzo
-            Santo Domingo, Distrito Nacional</p>
-            <a href="https://wa.me/18298807107" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.facebook.com/profile.php?id=61574558664918" target="_blank" rel="noopener" title="Facebook"> <i class="fa-brands fa-facebook"></i></a>
-
-    </div>
-    &copy; 2025 VeloX. Todos los derechos reservados.
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC3N6dpB4unIzeZzbZhgEocepfCKrnvbI&callback=initMap"></script>
-
-</html>
+    </html>

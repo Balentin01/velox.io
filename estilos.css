@@ -3,6 +3,23 @@
     padding: 0;
     box-sizing: border-box; 
 }
+/* Modo claro (por defecto) */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+}
 
 body {
     font-family: Arial, sans-serif; 
@@ -10,6 +27,7 @@ body {
     background-color: #f4f4f4;
     padding-top: 80px; /* Esto asegura que el contenido no quede oculto debajo del header */
 }
+
 
 header { 
     background: #222; 
@@ -172,9 +190,10 @@ a {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: rgb(32, 1, 1);
     text-align: center;
     z-index: 2;
+    font-weight: bold;
 }
 
 .hero-text h2 {
