@@ -208,3 +208,27 @@ checkbox.addEventListener("change", () => {
         localStorage.setItem("dark-mode", "disabled");
     }
 });
+
+//secret egg
+document.addEventListener("keydown", (event) => {
+    if (event.key.toLowerCase() === "v") { // Si presiona la tecla "R"
+        const secretMessage = document.createElement("div");
+        secretMessage.innerHTML = "🔥 Felicidades, Acabas de obtener un 50% 🔥";
+        secretMessage.style.position = "fixed";
+        secretMessage.style.bottom = "20px";
+        secretMessage.style.right = "20px";
+        secretMessage.style.background = "black";
+        secretMessage.style.color = "white";
+        secretMessage.style.padding = "10px";
+        secretMessage.style.borderRadius = "5px";
+        secretMessage.style.boxShadow = "0 0 10px rgba(255,255,255,0.5)";
+        secretMessage.style.zIndex = "1000";
+
+        document.body.appendChild(secretMessage);
+
+        // Ocultar el mensaje después de 5 segundos
+        setTimeout(() => {
+            secretMessage.remove();
+        }, 5000);
+    }
+});
